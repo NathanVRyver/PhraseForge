@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { run } from "./Gemini";
 import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
 
 function App() {
   const [productName, setProductName] = useState("");
@@ -17,30 +19,37 @@ function App() {
 
   const handleNameChange = (e) => {
     setProductName(e.target.value);
-    console.log(productName);
   };
   const handleUseCaseChange = (e) => {
     setProductUse(e.target.value);
-    console.log(productUse);
   };
   return (
     <>
+      <div id="multi-layered-glow">
+        <Navbar />
+        <Hero />
+      </div>
+
       <div>Ecommerce Product Descriptions</div>
       <form>
-        <label>Product Name</label>
-        <input
-          type="text"
-          name="productname"
-          placeholder="Enter your product name"
-          onChange={handleNameChange}
-        ></input>
-        <label>Product Main Use Case(s)</label>
-        <input
-          type="text"
-          name="usecase"
-          onChange={handleUseCaseChange}
-          placeholder="Enter your use case name"
-        ></input>
+        <div>
+          <label>Product Name</label>
+          <input
+            type="text"
+            name="productname"
+            placeholder="Enter your product name"
+            onChange={handleNameChange}
+          ></input>
+        </div>
+        <div>
+          <label>Product Main Use Case(s)</label>
+          <input
+            type="text"
+            name="usecase"
+            onChange={handleUseCaseChange}
+            placeholder="Enter your use case name"
+          ></input>
+        </div>
       </form>
       <button onClick={onButtonClick}>Generate a description</button>
     </>
