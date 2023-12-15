@@ -8,12 +8,11 @@ import { Footer } from "./components";
 function App() {
   return (
     <>
-      <div id="multi-layered-glow">
+      <div id="">
         <Navbar />
         <Hero />
       </div>
       <HowItWorks />
-      <Generator />
       <Footer />
     </>
   );

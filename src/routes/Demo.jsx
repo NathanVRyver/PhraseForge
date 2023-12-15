@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { checkAuthStatus } from "../lib/Firebase";
+import { Generator } from "../components";
 
 export function Demo() {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
@@ -29,6 +30,7 @@ export function Demo() {
   return (
     <div>
       <h2>Demo Page</h2>
+      <Generator />
     </div>
   );
 }
