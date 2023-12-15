@@ -8,8 +8,12 @@ export function Hero() {
         AI Generated Product Descriptions For Your Ecommerce Store
       </p>
       <div className="flex flex-row space-x-3 justify-center align-middle py-10">
-        <button>Sign Up</button>
-        <button>See Examples</button>
+        <a href="/signup">
+          <button>Sign Up</button>
+        </a>
+        <a href="/examples">
+          <button>See Examples</button>
+        </a>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+// Your main index.js or entry point file
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -5,6 +6,7 @@ import App from "./App.jsx";
 import { Examples } from "./routes/Examples.jsx";
 import { Login } from "./routes/Login.jsx";
 import { SignUp } from "./routes/SignUp.jsx";
+import { Demo } from "./routes/Demo.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/demo/",
+    element: <Demo />,
   },
 ]);
 

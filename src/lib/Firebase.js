@@ -4,6 +4,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged, // Added this import for user authentication state change
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -27,4 +28,17 @@ const signIn = (email, password) => {
   return signInWithEmailAndPassword(auth, email, password);
 };
 
-export { auth, signUp, signIn };
+const checkAuthStatus = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      unsubscribe();
+      if (user) {
+        resolve(user);
+      } else {
+        reject(new Error("User not authenticated"));
+      }
+    });
+  });
+};
+
+export { auth, signUp, signIn, checkAuthStatus };
