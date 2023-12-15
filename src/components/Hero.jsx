@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <div className="py-48">
+    <div className="py-48 hero">
       <h1 className="text-center text-6xl font-black py-5 w-full">
         Welcome to PhraseForge
       </h1>

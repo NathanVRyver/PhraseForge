@@ -16,11 +16,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #007bff80;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #007bff80;
 }
 
 body {
@@ -36,28 +36,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-#multi-layered-glow {
-  width: 100%;
-  height: 80%;
-  background-color: #000;
-  position: relative;
-}
-#multi-layered-glow:before {
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: " ";
-  position: absolute;
-  z-index: 0;
-  background: radial-gradient(
-      circle at 25% 50%,
-      rgba(0, 98, 255, 0.5),
-      transparent 20%
-    ),
-    radial-gradient(circle at 25% 50%, rgba(0, 123, 255, 0.5), transparent 25%),
-    radial-gradient(circle at 25% 50%, rgba(0, 255, 187, 0.5), transparent 30%);
-  -webkit-mask: radial-gradient(circle at 25% 50%, black 0%, transparent 30%);
-}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -70,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #007bff80;
 }
 button:focus,
 button:focus-visible {
@@ -88,4 +67,36 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+#multi-layered-glow {
+  width: 100%;
+  height: 80%;
+  z-index: 1;
+  background-color: #000;
+  position: relative;
+}
+#multi-layered-glow:before {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  background: radial-gradient(
+      circle at 25% 50%,
+      rgba(0, 98, 255, 0.5),
+      transparent 20%
+    ),
+    radial-gradient(circle at 25% 50%, #007bff80, transparent 25%),
+    radial-gradient(circle at 25% 50%, rgba(0, 255, 187, 0.5), transparent 30%);
+  -webkit-mask: radial-gradient(circle at 25% 50%, black 0%, transparent 30%);
+}
+.navbar,
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
+#root {
+  width: 100%;
 }
