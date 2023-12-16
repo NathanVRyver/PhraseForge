@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { checkAuthStatus } from "../lib/Firebase";
 import { Generator } from "../components";
+import { Navbar, Footer } from "../components";
 
 export function Demo() {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
@@ -28,9 +29,12 @@ export function Demo() {
   }
 
   return (
-    <div>
-      <h2>Demo Page</h2>
-      <Generator />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="flex-grow">
+        <Generator />
+      </div>
+      <Footer />
     </div>
   );
 }
