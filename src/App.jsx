@@ -2,9 +2,9 @@
 import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Generator } from "./components/Generator";
 import { HowItWorks } from "./components";
 import { Footer } from "./components";
+import { CTAs } from "./components/Ctas";
 function App() {
   return (
     <>
@@ -12,6 +12,7 @@ function App() {
         <Navbar />
         <Hero />
       </div>
+      <CTAs />
       <HowItWorks />
       <Footer />
     </>

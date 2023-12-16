@@ -7,7 +7,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+  background-color: #01020c;
   --primary-color: #007bff80;
   --secondary-color: #224d7a;
   --accent-color: #408cde;
@@ -88,7 +88,7 @@ button:focus-visible {
   position: absolute;
   z-index: 0;
   background: radial-gradient(
-      circle at 25% 50%,
+      circle at 50% 50%,
       rgba(0, 98, 255, 0.5),
       transparent 20%
     ),
@@ -111,4 +111,8 @@ button:focus-visible {
   background: linear-gradient(to right, #121fcf 0%, #408cde 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gigantic-text {
+  font-size: 146px;
 }

@@ -20,32 +20,27 @@ export function Generator() {
   };
   return (
     <>
-      <div className="text-6xl font-bold py-7">Give it a try!</div>
       <form>
         <div>
-          <label className="text-xl font-medium p-6">Product Name:</label>
+          <label>Product Name</label>
           <input
             type="text"
             name="productname"
             placeholder="Enter your product name"
             onChange={handleNameChange}
-            className="m-4  p-1 rounded-sm"
           ></input>
         </div>
         <div>
-          <label className="text-xl font-medium p-6">
-            Product Main Use Case(s):
-          </label>
+          <label>Product Main Use Case(s)</label>
           <input
             type="text"
             name="usecase"
             onChange={handleUseCaseChange}
             placeholder="Enter your use case name"
-            className="m-4  p-1 rounded-sm"
           ></input>
         </div>
       </form>
-      <button onClick={onButtonClick}>Generate </button>
+      <button onClick={onButtonClick}>Generate a description</button>
     </>
   );
 }
