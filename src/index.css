@@ -141,3 +141,22 @@ button:focus-visible {
     transform: rotate(360deg);
   }
 }
+
+.image-container-examples1 {
+  height: 570px;
+  overflow: hidden;
+}
+.image-container-examples1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-container-examples2 {
+  height: 400px;
+  overflow: hidden;
+}
+.image-container-examples2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
