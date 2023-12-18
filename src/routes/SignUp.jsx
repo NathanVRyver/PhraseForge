@@ -41,10 +41,7 @@ export function SignUp() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button
-          className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 focus:outline-none focus:shadow-outline-green"
-          onClick={handleSignUp}
-        >
+        <button id="button" onClick={handleSignUp}>
           Sign Up
         </button>
       </div>

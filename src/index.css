@@ -41,7 +41,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+#button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -53,11 +53,30 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+#button:hover {
   border-color: #ffffff;
 }
-button:focus,
-button:focus-visible {
+#button:focus,
+#button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+#outline-button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: -webkit-linear-gradient(to right, #d1760f 0%, #e3620b 100%);
+  background: -moz-linear-gradient(to right, #d1760f 0%, #e3620b 100%);
+  background: linear-gradient(to right, #d1760f 0%, #e3620b 100%);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+#outline-button:hover {
+  border-color: #ffffff;
+}
+#button:focus,
+#button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 

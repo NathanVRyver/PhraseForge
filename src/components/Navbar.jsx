@@ -10,10 +10,10 @@ export function Navbar() {
       </div>
       <div className="flex space-x-3">
         <Link to="/login">
-          <button>Login</button>
+          <button id="button">Login</button>
         </Link>
         <Link to="/demo">
-          <button id="generate-button">Generate</button>
+          <button id="outline-button">Generate</button>
         </Link>
       </div>
     </div>

@@ -38,10 +38,7 @@ export function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button
-          className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue"
-          onClick={handleLogin}
-        >
+        <button id="button" onClick={handleLogin}>
           Login
         </button>
       </div>
