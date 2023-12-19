@@ -34,7 +34,7 @@ export function Generator() {
             name="productname"
             placeholder="Enter your product name"
             onChange={handleNameChange}
-            className="p-4"
+            className="p-2 rounded-md"
           />
         </div>
 
@@ -47,12 +47,14 @@ export function Generator() {
             type="text"
             name="usecase"
             onChange={handleUseCaseChange}
-            placeholder="Enter your use case name"
-            className="p-4"
+            placeholder="Enter your product's use case"
+            className="p-2 rounded-md"
           ></input>
         </div>
       </form>
-      <button onClick={onButtonClick}>Generate a description</button>
+      <button onClick={onButtonClick} id="outline-button">
+        Generate a description
+      </button>
       {result && <DescriptionContainer Description={result} />}
       {loading && <Loader />}
     </>
@@ -74,3 +76,4 @@ function Loader() {
     </>
   );
 }
+// TODO - TRAIN THE MODEL BETTER FOR MORE SEO OPTIMIZED RESULTS
