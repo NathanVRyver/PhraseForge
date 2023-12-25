@@ -42,7 +42,7 @@ async function run(productName, productUse) {
 
   const parts = [
     {
-      text: `Write me a product description for my product: ${productName} , its main use case is: ${productUse} . Please make sure it is highly converting and follows the best copy writing practices`,
+      text: `Craft a compelling product description for the ${productName}. Highlight its primary use case: ${productUse}. Your goal is to create a description that not only captivates the reader's interest but also maximizes conversion rates. Incorporate persuasive language and adhere to best copywriting practices to ensure an impactful and engaging narrative.`,
     },
   ];
 

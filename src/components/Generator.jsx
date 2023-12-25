@@ -55,12 +55,22 @@ export function Generator() {
       <button onClick={onButtonClick} id="outline-button">
         Generate a description
       </button>
-      {result && <DescriptionContainer Description={result} />}
-      {loading && <Loader />}
+      <br />
+      <div>
+        {result && <DescriptionContainer Description={result} />}
+        {loading && <Loader />}
+      </div>
     </>
   );
 }
 function DescriptionContainer({ Description }) {
+  if (!Description) {
+    return (
+      <div>
+        <h1>Your description was not generated, please try again.</h1>
+      </div>
+    );
+  }
   return (
     <div className="w-2/3  mx-auto py-6">
       <h1 className="text-2xl font-bold py-2">Your Product Description:</h1>
