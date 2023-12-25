@@ -6,6 +6,8 @@ export function SignUp() {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
+  const [InvalidCreds, setInvalidCreds] = useState(null);
+
   const [isAuthenticated, setIsAuthenticated] = useState(null);
   useEffect(() => {
     const checkAuth = async () => {
@@ -36,6 +38,7 @@ export function SignUp() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error("Error signing up:", errorCode, errorMessage);
+      setInvalidCreds(true);
     }
   };
 
@@ -65,6 +68,16 @@ export function SignUp() {
         <button id="button" onClick={handleSignUp}>
           Sign Up
         </button>
+        {InvalidCreds && (
+          <div className="py-4">
+            <h1
+              className="text-red-600 text-sm
+            "
+            >
+              Invalid email and/or password
+            </h1>
+          </div>
+        )}
       </div>
       <Footer />
     </>

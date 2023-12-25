@@ -1,5 +1,4 @@
-// App.js
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { checkAuthStatus } from "./lib/Firebase";
 import { Navbar, Hero, CTAs, HowItWorks, Footer } from "./components";
 
