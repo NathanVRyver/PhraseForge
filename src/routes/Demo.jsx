@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { checkAuthStatus } from "../lib/Firebase";
 import { Generator } from "../components";
@@ -19,7 +19,9 @@ export function Demo() {
 
     checkAuth();
   }, []);
-
+  const handleSignOut = () => {
+    setIsAuthenticated(false); // Update the authentication state
+  };
   if (isAuthenticated === null) {
     return <div>Loading...</div>;
   }
@@ -30,7 +32,7 @@ export function Demo() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar isAuthenticated={isAuthenticated} onSignOut={handleSignOut} />
       <div className="flex-grow">
         <Generator />
       </div>

@@ -45,22 +45,32 @@ export function Demonstration() {
     <>
       <div className="m-4 grid grid-cols-3 gap-4">
         {example.map((product, index) => (
-          <div key={index} className="border p-4">
+          <div
+            key={index}
+            className="border p-4 space-y-4 rounded-lg border-[#007bff80]"
+          >
             <div className="image-container-examples2">
               <img src={product.Image} alt="product image" />
             </div>
-            <h2 className="text-lg font-semibold mb-2">{product.Product}</h2>
+            <h2 className="text-lg font-semibold text-[#408cde] mb-2">
+              {product.Product}
+            </h2>
             <p>{product.Description}</p>
           </div>
         ))}
       </div>
       <div className="m-4 grid grid-cols-2 gap-4">
         {Example2.map((product, index) => (
-          <div key={index} className="border p-4">
+          <div
+            key={index}
+            className="border p-4 space-y-4 rounded-lg border-[#007bff80]"
+          >
             <div className="image-container-examples1">
               <img src={product.Image} alt="product image" />
             </div>
-            <h2 className="text-lg font-semibold mb-2">{product.Product}</h2>
+            <h2 className="text-lg font-semibold mb-2 text-[#408cde]">
+              {product.Product}
+            </h2>
             <p>{product.Description}</p>
           </div>
         ))}

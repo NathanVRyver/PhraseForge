@@ -1,7 +1,7 @@
-// firebase.js
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
+  signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged, // Added this import for user authentication state change
@@ -27,7 +27,10 @@ const signUp = (email, password) => {
 const signIn = (email, password) => {
   return signInWithEmailAndPassword(auth, email, password);
 };
-
+const signOutUser = () => {
+  console.log("signed out");
+  return signOut(auth);
+};
 const checkAuthStatus = () => {
   return new Promise((resolve, reject) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -41,4 +44,4 @@ const checkAuthStatus = () => {
   });
 };
 
-export { auth, signUp, signIn, checkAuthStatus };
+export { auth, signUp, signIn, checkAuthStatus, signOutUser };
