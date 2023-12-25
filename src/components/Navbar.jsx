@@ -18,17 +18,19 @@ export function Navbar({ isAuthenticated, onSignOut }) {
         {isAuthenticated ? (
           <>
             <Link to="/demo" className="mx-2">
-              Demo
+              <button id="outline-button">Demo</button>
             </Link>
-            <button onClick={handleSignOut}>Logout</button>
+            <button onClick={handleSignOut} id="button">
+              Logout
+            </button>
           </>
         ) : (
           <>
             <Link to="/login" className="mx-2">
-              Login
+              <button id="outline-button">Login</button>
             </Link>
             <Link to="/signup" className="mx-2">
-              Signup
+              <button id="button">Signup</button>
             </Link>
           </>
         )}

@@ -43,7 +43,7 @@ export function Demonstration() {
 
   return (
     <>
-      <div className="m-4 grid grid-cols-3 gap-4">
+      <div className="m-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {example.map((product, index) => (
           <div
             key={index}
@@ -59,7 +59,7 @@ export function Demonstration() {
           </div>
         ))}
       </div>
-      <div className="m-4 grid grid-cols-2 gap-4">
+      <div className="m-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {Example2.map((product, index) => (
           <div
             key={index}

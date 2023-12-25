@@ -57,7 +57,7 @@ export function Generator() {
       </button>
       <br />
       <div>
-        {result && <DescriptionContainer Description={result} />}
+        {!loading && result && <DescriptionContainer Description={result} />}
         {loading && <Loader />}
       </div>
     </>
@@ -81,9 +81,9 @@ function DescriptionContainer({ Description }) {
 
 function Loader() {
   return (
-    <>
-      <span className="loader"></span>
-    </>
+    <div className="py-6">
+      <span className="loader "></span>
+    </div>
   );
 }
 // TODO - TRAIN THE MODEL BETTER FOR MORE SEO OPTIMIZED RESULTS

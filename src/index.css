@@ -131,15 +131,40 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .headliner2 {
   background: #d1760f;
   background: linear-gradient(to right, #d1760f 0%, #e3620b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .gigantic-text {
   font-size: 146px;
+  line-height: 9rem;
 }
+
+@media (max-width: 768px) {
+  .headliner {
+    background: #121fcf;
+    background: linear-gradient(to right, #121fcf 0%, #408cde 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .headliner2 {
+    background: #d1760f;
+    background: linear-gradient(to right, #d1760f 0%, #e3620b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gigantic-text {
+    font-size: 70px;
+    line-height: 5rem;
+  }
+}
+
 /* Loader */
 .loader {
   width: 48px;
